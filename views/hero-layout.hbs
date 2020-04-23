@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Konferencja CODEventure</title>
+
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/stylesheets/bulma.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<section id="homeMainHero" class="hero is-link is-fullheight-with-navbar">
+    <nav class="navbar is-fixed-top is-light" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/">
+                    <img src="/images/logo.png">
+                </a>
+
+                <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div class="navbar-menu" id="navMenu">
+                <div class="navbar-start">
+                    <a href="/" class="navbar-item">Home</a>
+                    <a href="/speakers" class="navbar-item">Prelegenci</a>
+                    <a href="/schedule" class="navbar-item">Agenda</a>
+                    <a href="/venue" class="navbar-item">Miejsce</a>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <a href="/register" class="button is-primary is-rounded is-fullwidth">Zapisz się</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <div class="columns">
+                <div class="column is-6 is-offset-3">
+                    <nav class="level is-mobile" id="countdown">
+                        <div class="level-item has-text-centered">
+                            <div>
+                                <p class="title is-1 days"></p>
+                                <p class="heading">Dni</p>
+                            </div>
+                        </div>
+                        <div class="level-item has-text-centered">
+                            <div>
+                                <p class="title is-1 hours"></p>
+                                <p class="heading">Godzin</p>
+                            </div>
+                        </div>
+                        <div class="level-item has-text-centered">
+                            <div>
+                                <p class="title is-1 minutes"></p>
+                                <p class="heading">Minut</p>
+                            </div>
+                        </div>
+                        <div class="level-item has-text-centered">
+                            <div>
+                                <p class="title is-1 seconds">789</p>
+                                <p class="heading">Sekund</p>
+                            </div>
+                        </div>
+                    </nav>
+                    <p class="subtitle is-4">Największa konferencja programistyczna w Polsce.</p>
+                    <p class="subtitle is-5">Nie może Cię zabraknąć!</p>
+                </div>
+            </div>
+            <div class="columns hero-cta">
+                <div class="column is-2 is-offset-5">
+                    <a href="/register" class="button is-primary is-rounded">Zapisz się już teraz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{{body}}}
+</body>
+<script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+<script src="/javascripts/menu-toggle.js"></script>
+<script>
+    function getTimeRemaining(e){var n=Date.parse(e)-Date.parse(new Date),t=Math.floor(n/1e3%60),a=Math.floor(n/1e3/60%60),r=Math.floor(n/36e5%24);return{total:n,days:Math.floor(n/864e5),hours:r,minutes:a,seconds:t}}function initializeClock(e,n){var t=document.getElementById(e),a=t.querySelector(".days"),r=t.querySelector(".hours"),i=t.querySelector(".minutes"),o=t.querySelector(".seconds");function l(){var e=getTimeRemaining(n);a.innerHTML=e.days,r.innerHTML=("0"+e.hours).slice(-2),i.innerHTML=("0"+e.minutes).slice(-2),o.innerHTML=("0"+e.seconds).slice(-2),e.total<=0&&clearInterval(s)}l();var s=setInterval(l,1e3)}var deadline=new Date(Date.parse(new Date)+1296e6);initializeClock("countdown",deadline);
+</script>
+</html>

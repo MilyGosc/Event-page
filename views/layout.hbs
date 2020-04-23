@@ -1,10 +1,49 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>{{title}}</title>
+<html class="has-navbar-fixed-top">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Konferencja CODEventure</title>
+
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/stylesheets/bulma.min.css">
     <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
+</head>
+<body>
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/">
+                    <img src="/images/logo.png">
+                </a>
+
+                <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div class="navbar-menu" id="navMenu">
+                <div class="navbar-start">
+                    <a href="/" class="navbar-item">Home</a>
+                    <a href="/speakers" class="navbar-item">Prelegenci</a>
+                    <a href="/schedule" class="navbar-item">Agenda</a>
+                    <a href="/venue" class="navbar-item">Miejsce</a>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <a href="/register" class="button is-primary is-rounded is-fullwidth">Zapisz się</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
     {{{body}}}
-  </body>
+</body>
+<script src="/javascripts/menu-toggle.js"></script>
 </html>
