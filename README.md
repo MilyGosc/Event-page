@@ -1,6 +1,6 @@
-# ssw-projekt
+# event-page
 
-Demo available here: soon
+Demo available here: https://8567p.szeptycki.com/
 
 ---
-Author: Jakub Szeptycki (20770)
+Author: Jakub Szeptycki

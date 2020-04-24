@@ -1,0 +1,30 @@
+{{> pageTitle title='Dziękujemy za zakup' }}
+<section class="section">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-4 has-text-centered">
+                <strong>{{fullName}}</strong>, dziękujemy za zamówienie,
+                potwierdzenie zamówienia wysłaliśmy na adres <strong>{{email}}</strong>.
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <div class="columns is-centered order-summary">
+            <div class="column is-4">
+                <h3 class="title is-5">Podsumowanie zamówienia</h3>
+                <table class="table is-fullwidth">
+                    <tr>
+                        <td>{{amount}} x Bilet na CODEventure 2020</td>
+                        <td class="has-text-right price">199,99 zł</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="has-text-right price">Suma: {{sum}} zł</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

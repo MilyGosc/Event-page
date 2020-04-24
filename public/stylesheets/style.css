@@ -18,6 +18,10 @@ body,button,input,select,textarea {
   color: #fff;
 }
 
+.button.is-primary[disabled] {
+  background-color: #e30083;
+}
+
 .page-title .title {
   text-transform: uppercase;
   text-align: center;
@@ -37,6 +41,10 @@ body,button,input,select,textarea {
 
 .is-disabled {
   display: none;
+}
+
+.order-summary .price {
+  font-weight: 600;
 }
 
 #homeMainHero {

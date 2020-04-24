@@ -21,4 +21,16 @@ router.get('/register', function(req, res) {
   res.render('register');
 });
 
+router.post('/ticket-order', function(req, res) {
+  if (req.param('email') == null) {
+    res.redirect('/');
+  }
+  res.render('ticket-order', {
+    fullName: req.param('fullName'),
+    email: req.param('email'),
+    amount: req.param('amount'),
+    sum: req.param('amount') * 199.99
+  });
+});
+
 module.exports = router;

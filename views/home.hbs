@@ -69,24 +69,24 @@
             </div>
             <div class="column is-two-fifths">
                 <h3 class="title is-3">Zakup biletu</h3>
-                <form action="/buy" method="post">
+                <form action="/ticket-order" method="post">
                     <div class="field">
                         <label class="label">Imię i nazwisko</label>
                         <div class="control">
-                            <input class="input" type="text">
+                            <input class="input" type="text" name="fullName">
                         </div>
                     </div>
                     <div class="field">
                         <label class="label">Adres email</label>
                         <div class="control">
-                            <input class="input" type="email">
+                            <input class="input" type="email" name="email">
                         </div>
                     </div>
                     <div class="field">
                         <label class="label">Ilość</label>
                         <div class="control">
                             <div class="select">
-                                <select id="ticketAmount">
+                                <select id="ticketAmount" name="amount">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -186,7 +186,7 @@
             </div>
         </section>
         <footer class="modal-card-foot">
-            <button class="button is-success" id="check-quiz">Sprawdź</button>
+            <button class="button is-primary is-rounded" id="check-quiz">Sprawdź</button>
             <div class="is-disabled" id="quiz-result">
                 <p class="content">Twój wynik: <span id="quiz-result-score"></span>/3</p>
             </div>
