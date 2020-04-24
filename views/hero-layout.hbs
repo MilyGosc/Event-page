@@ -11,9 +11,12 @@
 
     <link rel="stylesheet" href="/stylesheets/bulma.min.css">
     <link rel='stylesheet' href='/stylesheets/style.css'/>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+            integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 </head>
 <body>
-<section id="homeMainHero" class="hero is-link is-fullheight-with-navbar">
+<section id="homeMainHero" class="hero is-fullheight-with-navbar">
     {{>navbar}}
     <div class="hero-body">
         <div class="container has-text-centered">
@@ -51,7 +54,7 @@
             </div>
             <div class="columns hero-cta">
                 <div class="column is-2 is-offset-5">
-                    <a href="/register" class="button is-primary is-rounded">Zapisz się już teraz</a>
+                    <a href="/#buyTicket" class="button is-primary is-medium is-rounded">Kup bilet już teraz</a>
                 </div>
             </div>
         </div>
@@ -60,8 +63,6 @@
 {{{body}}}
 {{>footer}}
 </body>
-<script src="https://code.jquery.com/jquery-3.5.0.min.js"
-        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 <script src="/javascripts/menu-toggle.js"></script>
 <script>
     function getTimeRemaining(e){var n=Date.parse(e)-Date.parse(new Date),t=Math.floor(n/1e3%60),a=Math.floor(n/1e3/60%60),r=Math.floor(n/36e5%24);return{total:n,days:Math.floor(n/864e5),hours:r,minutes:a,seconds:t}}function initializeClock(e,n){var t=document.getElementById(e),a=t.querySelector(".days"),r=t.querySelector(".hours"),i=t.querySelector(".minutes"),o=t.querySelector(".seconds");function l(){var e=getTimeRemaining(n);a.innerHTML=e.days,r.innerHTML=("0"+e.hours).slice(-2),i.innerHTML=("0"+e.minutes).slice(-2),o.innerHTML=("0"+e.seconds).slice(-2),e.total<=0&&clearInterval(s)}l();var s=setInterval(l,1e3)}var deadline=new Date(Date.parse(new Date)+1296e6);initializeClock("countdown",deadline);

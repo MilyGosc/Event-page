@@ -1,8 +1,65 @@
-<section class="section">
+<section class="section" id="buyTicket">
     <div class="container">
-        <h1 class="title">Home</h1>
-        <h2 class="subtitle">
-            Podtytuł na stronie Home
-        </h2>
+        <div class="columns">
+            <div class="column is-three-fifths">
+                <h3 class="title is-3">Dlaczego warto do nas zajrzeć</h3>
+                <div class="content is-medium">
+                    <ul class="pros">
+                        <li>Najlepsi prelegenci z całej Polski, pracujący na codzień z klientami z branży</li>
+                        <li>Prelekcje bazujące tylko i wyłącznie na projektach działających w biznesie</li>
+                        <li>Darmowe napoje (w tym świeżo mielona kawa) w przerwach</li>
+                        <li>Afterparty z open barem na zakończenie imprezy</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column is-two-fifths">
+                <h3 class="title is-3">Zakup biletu</h3>
+                <form action="/buy" method="post">
+                    <div class="field">
+                        <label class="label">Imię i nazwisko</label>
+                        <div class="control">
+                            <input class="input" type="text">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Adres email</label>
+                        <div class="control">
+                            <input class="input" type="email">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Ilość</label>
+                        <div class="control">
+                            <div class="select">
+                                <select id="ticketAmount">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content is-inline-block-desktop subtitle is-4">
+                        Cena: <span id="price">199.99</span> zł
+                    </div>
+                    <div class="field is-inline-block-desktop is-pulled-right-desktop">
+                        <div class="control">
+                            <button class="button is-primary is-rounded">Zamawiam</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </section>
+<script>
+    $('#ticketAmount').on('change', function () {
+        $('#price').text(this.value * 199.99);
+    });
+</script>

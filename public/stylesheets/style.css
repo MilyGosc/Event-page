@@ -36,8 +36,13 @@ body,button,input,select,textarea {
   background-size: cover;
 }
 
-#homeMainHero .title {
+#homeMainHero .title,
+#homeMainHero .subtitle {
   color: #ffffff;
+}
+
+#homeMainHero .hero-cta {
+  margin-top: 25px;
 }
 
 #countdown .heading {
@@ -47,6 +52,7 @@ body,button,input,select,textarea {
 .navbar {
   background: #ffffff !important;
   transition: background .25s ease-in-out;
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
 }
 
 .navbar-start>.navbar-item {
@@ -60,6 +66,22 @@ body,button,input,select,textarea {
 .navbar-link.is-active, .navbar-link:focus, .navbar-link:focus-within, .navbar-link:hover, a.navbar-item.is-active, a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover {
   background-color: #fafafa !important;
   color: #ff0093 !important;
+}
+
+.pros {
+  list-style: none !important;
+}
+
+.pros li::before {
+  position: relative;
+  top: -2px;
+  content: "\25A0";
+  color: #ff0093;
+  padding-right: 1em;
+}
+
+.pros li {
+  margin-bottom: 1em;
 }
 
 .footer .logo {
@@ -92,6 +114,48 @@ body,button,input,select,textarea {
 .speaker .speaker-position {
   text-align: center;
 }
+
+.schedule-line {
+  padding: 0 2rem;
+  margin-bottom: 2rem !important;
+}
+
+.schedule-line.break {
+  background: #eeeeee;
+  border-radius: 1rem;
+}
+
+.schedule-line .schedule-time {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #ff0093;
+}
+
+.schedule-line .schedule-header {
+  font-size: 1.25rem;
+}
+
+.schedule-line .schedule-header {
+  font-weight: 800;
+}
+
+.schedule-line .schedule-description {
+  color: #777777;
+  margin: 1rem 0;
+  font-weight: 600;
+}
+
+.schedule-line .schedule-speaker {
+  color: #ff0093;
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 1024px) {
+  .is-pulled-right-desktop {
+    float: right !important;
+  }
+}
+
 
 .is-text-600 {
   font-weight: 600 !important;
