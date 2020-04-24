@@ -34,9 +34,6 @@ body,button,input,select,textarea {
 
 .page-title .subtitle {
   text-align: center;
-  max-width: 60%;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .is-disabled {
@@ -196,9 +193,36 @@ body,button,input,select,textarea {
   margin-bottom: 1rem;
 }
 
+@media only screen and (max-width: 1023px) {
+  .schedule .schedule-line.break .column:first-child {
+    padding-top: .25rem;
+    padding-bottom: 0;
+  }
+
+  .schedule .schedule-line.break .column:last-child {
+    padding-top: 0;
+    padding-bottom: .25rem;
+  }
+
+  .schedule .schedule-line .column:first-child {
+    padding-top: .25rem;
+    padding-bottom: 0;
+  }
+
+  .schedule .schedule-line .column:last-child {
+    padding-top: 0;
+  }
+}
+
 @media only screen and (min-width: 1024px) {
   .is-pulled-right-desktop {
     float: right !important;
+  }
+
+  .page-title .subtitle {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
