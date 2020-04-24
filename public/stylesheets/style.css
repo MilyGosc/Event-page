@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body,button,input,select,textarea {
   font-family: 'Manrope', sans-serif;
 }
@@ -78,6 +82,26 @@ body,button,input,select,textarea {
   content: "\25A0";
   color: #ff0093;
   padding-right: 1em;
+}
+
+.counter .title {
+  font-size: 4rem;
+}
+
+.counter .heading {
+  font-size: 1rem;
+}
+
+.event-description {
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+.last-event img {
+  width: 80%;
+  height: 80%;
+  border-radius: 5px;
+  margin: 0 auto;
 }
 
 .pros li {

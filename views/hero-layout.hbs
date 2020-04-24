@@ -20,8 +20,8 @@
     {{>navbar}}
     <div class="hero-body">
         <div class="container has-text-centered">
-            <div class="columns">
-                <div class="column is-6 is-offset-3">
+            <div class="columns is-centered">
+                <div class="column is-5">
                     <nav class="level is-mobile" id="countdown">
                         <div class="level-item has-text-centered">
                             <div>
@@ -48,7 +48,11 @@
                             </div>
                         </div>
                     </nav>
-                    <p class="subtitle is-4">Największa konferencja programistyczna w Polsce.</p>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <h1 class="title is-spaced">Największa konferencja programistyczna w Polsce.</h1>
                     <p class="subtitle is-5">Nie może Cię zabraknąć!</p>
                 </div>
             </div>
@@ -65,6 +69,6 @@
 </body>
 <script src="/javascripts/menu-toggle.js"></script>
 <script>
-    function getTimeRemaining(e){var n=Date.parse(e)-Date.parse(new Date),t=Math.floor(n/1e3%60),a=Math.floor(n/1e3/60%60),r=Math.floor(n/36e5%24);return{total:n,days:Math.floor(n/864e5),hours:r,minutes:a,seconds:t}}function initializeClock(e,n){var t=document.getElementById(e),a=t.querySelector(".days"),r=t.querySelector(".hours"),i=t.querySelector(".minutes"),o=t.querySelector(".seconds");function l(){var e=getTimeRemaining(n);a.innerHTML=e.days,r.innerHTML=("0"+e.hours).slice(-2),i.innerHTML=("0"+e.minutes).slice(-2),o.innerHTML=("0"+e.seconds).slice(-2),e.total<=0&&clearInterval(s)}l();var s=setInterval(l,1e3)}var deadline=new Date(Date.parse(new Date)+1296e6);initializeClock("countdown",deadline);
+    function getTimeRemaining(e){var n=Date.parse(e)-Date.parse(new Date),t=Math.floor(n/1e3%60),a=Math.floor(n/1e3/60%60),r=Math.floor(n/36e5%24);return{total:n,days:Math.floor(n/864e5),hours:r,minutes:a,seconds:t}}function initializeClock(e,n){var t=document.getElementById(e),a=t.querySelector(".days"),r=t.querySelector(".hours"),i=t.querySelector(".minutes"),o=t.querySelector(".seconds");function l(){var e=getTimeRemaining(n);a.innerHTML=e.days,r.innerHTML=("0"+e.hours).slice(-2),i.innerHTML=("0"+e.minutes).slice(-2),o.innerHTML=("0"+e.seconds).slice(-2),e.total<=0&&clearInterval(s)}l();var s=setInterval(l,1e3)}var deadline=new Date(Date.parse("15 May 2020 09:00:00 GMT+0200"));initializeClock("countdown",deadline);
 </script>
 </html>
