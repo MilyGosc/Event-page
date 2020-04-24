@@ -35,6 +35,10 @@ body,button,input,select,textarea {
   margin-right: auto;
 }
 
+.is-disabled {
+  display: none;
+}
+
 #homeMainHero {
   background: url("/images/home-hero-background.jpg") center no-repeat;
   background-size: cover;
@@ -174,12 +178,21 @@ body,button,input,select,textarea {
   font-weight: 600;
 }
 
+.quiz label.radio {
+  display: block;
+  margin-bottom: .5rem;
+  margin-left: 1rem;
+}
+
+.quiz .question:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
 @media only screen and (min-width: 1024px) {
   .is-pulled-right-desktop {
     float: right !important;
   }
 }
-
 
 .is-text-600 {
   font-weight: 600 !important;

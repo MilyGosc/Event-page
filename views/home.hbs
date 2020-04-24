@@ -22,6 +22,9 @@
                 </figure>
             </div>
         </div>
+        <div class="mt-45">
+            <button class="button is-medium is-rounded" id="open-quiz">Weź udział w quizie</button>
+        </div>
     </div>
 </section>
 <section class="hero is-danger is-primary is-bold">
@@ -110,8 +113,135 @@
         </div>
     </div>
 </section>
+<div class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">CODEventure QUIZ</p>
+            <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body quiz">
+            <div class="field question">
+                <label class="label">1. Jaki jest najpopularniejszy framework w Javie?</label>
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="question1" value="dropwizard">
+                        Dropwizard
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="question1" value="spring">
+                        Spring
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="question1" value="javalin">
+                        Javalin
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="question1" value="spark">
+                        Spark
+                    </label>
+                </div>
+            </div>
+            <div class="field question">
+                <label class="label">2. Która z technologii <strong>nie</strong> jest pre-procesorem języka CSS?</label>
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="question2" value="less">
+                        Less
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="question2" value="sass">
+                        Sass
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="question2" value="twig">
+                        Twig
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="question2" value="stylus">
+                        Stylus
+                    </label>
+                </div>
+            </div>
+            <div class="field question">
+                <label class="label">3. Która firma jest właścicielem technologii Java?</label>
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="question3" value="oracle">
+                        Oracle
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="question3" value="ibm">
+                        IBM
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="question3" value="sun">
+                        Sun Microsystems
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="question3" value="google">
+                        Google
+                    </label>
+                </div>
+            </div>
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button is-success" id="check-quiz">Sprawdź</button>
+            <div class="is-disabled" id="quiz-result">
+                <p class="content">Twój wynik: <span id="quiz-result-score"></span>/3</p>
+            </div>
+        </footer>
+    </div>
+</div>
 <script>
     $('#ticketAmount').on('change', function () {
         $('#price').text(this.value * 199.99);
     });
+</script>
+<script>
+    document.querySelector('#open-quiz').addEventListener('click', function (event) {
+        event.preventDefault();
+        var modal = document.querySelector('.modal');  // assuming you have only 1
+        var html = document.querySelector('html');
+        modal.classList.add('is-active');
+        html.classList.add('is-clipped');
+
+        modal.querySelector('.modal-background').addEventListener('click', function (e) {
+            e.preventDefault();
+            modal.classList.remove('is-active');
+            html.classList.remove('is-clipped');
+        });
+
+        modal.querySelector('.delete').addEventListener('click', function (e) {
+            e.preventDefault();
+            modal.classList.remove('is-active');
+            html.classList.remove('is-clipped');
+        });
+    });
+</script>
+<script>
+    let button = $('#check-quiz');
+    button.on('click', function () {
+        let q1 = $('input[name="question1"]:checked').val();
+        let q2 = $('input[name="question2"]:checked').val();
+        let q3 = $('input[name="question3"]:checked').val();
+
+        let score = 0;
+
+        if (q1 === 'spring') {
+            score++;
+        }
+
+        if (q2 === 'twig') {
+            score++;
+        }
+
+        if (q3 === 'oracle') {
+            score++;
+        }
+
+        button.prop('disabled', true);
+        $('#quiz-result-score').text(score);
+        $('#quiz-result').removeClass('is-disabled');
+    })
 </script>
